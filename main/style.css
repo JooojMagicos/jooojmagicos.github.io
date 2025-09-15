@@ -37,7 +37,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('images/ELEVADOR.jpg');
+  background-image: url('../images/ELEVADOR.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(60%);
