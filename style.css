@@ -78,9 +78,27 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  position: relative;
   font-family: var(--fonte-principal);
   font-weight: 500;
   letter-spacing: 5px;
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f4f4f4;
+    bottom: -2px;
+    left: -2px;
+    transform: scaleX(0);
+    transition: transform 0.7s ease-out;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
 }
 
 main {
