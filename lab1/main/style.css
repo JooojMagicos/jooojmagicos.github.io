@@ -18,24 +18,10 @@ body {
 header {
   display: flex;
   align-items: center;
-  background-color: #061127; 
+  background-color: #0056a0; 
   height: 100px; 
 }
 
-.fuetos
-{
-  display: flex;
-  
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.fuetos img
-{
-  height: 250px;
-  
-  border-radius: 20px;
-}
 
 .logo {
   position: relative;
@@ -60,20 +46,21 @@ header {
   z-index: 0;
 }
 
+/* efeito no hover */
 .logo:hover::before {
   filter: brightness(100%);
-  transform: scale(1.1); 
+  transform: scale(1.1); /* zoom controlado */
 }
 
-
+/* Texto sobre a imagem */
 .logo h1 {
   font-family: "Funnel Display", sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
   position: relative;
   color: white;
   margin: 0;
-  z-index: 1; 
+  z-index: 1; /* fica acima da imagem */
 }
 
 
@@ -91,27 +78,9 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  position: relative;
   font-family: var(--fonte-principal);
   font-weight: 500;
   letter-spacing: 5px;
-}
-
-nav ul li a::after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #f4f4f4;
-    bottom: -2px;
-    left: -2px;
-    transform: scaleX(0);
-    transition: transform 0.7s ease-out;
-}
-
-nav ul li a:hover::after{
-    transform: scaleX(1);
 }
 
 main {
@@ -122,41 +91,9 @@ main {
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*lembrar de organizar esse stylesheet por página */
-.poema {
-    background-color: #fff;
-    border: 2px solid #c47f3e;
-    border-radius: 12px;
-    padding: 20px 40px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    max-width: 600px;
-    text-align: center;
-}
-.poema p {
-    margin: 8px 0;
-    font-size: 1.2em;
-}
-
-/* parte info */
-
-.tabelaInfo 
-{
-    border-collapse: collapse;
-    
-    background-color: #fff;
-    margin: 50px auto;
-    
-}
-
-.tabelaInfo th, td
-{
-    border: 1px solid #000;
-    padding: 8px 15px;
-    text-align: center;
-}
 
 footer {
-    background-color: #061127;
+    background-color: #004d99;
     color: white;
     text-align: center;
     padding: 15px 0;
