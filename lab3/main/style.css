@@ -21,20 +21,85 @@ header {
   background-color: #061127; 
   height: 100px; 
 }
-
-.fuetos
+.imagens 
+{
+  background-color: black;
+  
+}
+.container
+{
+  padding: 0;
+}
+.sliderW
+{
+  position: relative;
+  max-width: 50rem;
+  margin-left: 0;
+  
+}
+.slider
 {
   display: flex;
-  
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%,0.25);
+  height: 768px;
+  width: 100vw;
 }
-.fuetos img
+.slider img
 {
-  height: 250px;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100vw;
+  height: 65vh;
+  background-color: #061127;
+  justify-content: center;
+}
+
+.video-item {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
   
-  border-radius: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+.videos p
+{
+  color: white;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .videos 
+  {
+    height: 120vh;
+  }
 }
 
 .logo {
@@ -112,6 +177,14 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;         /* permite quebrar para outra linha */
+    justify-content: center; /* centraliza */
+    gap: 8px;
+  }
 }
 
 main {

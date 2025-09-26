@@ -49,7 +49,7 @@ header {
 /* efeito no hover */
 .logo:hover::before {
   filter: brightness(100%);
-  transform: scale(1.1); /* zoom controlado */
+  transform: scale(1.1); /* zoom controlado na porra da imagem*/
 }
 
 /* Texto sobre a imagem */
@@ -60,10 +60,33 @@ header {
   position: relative;
   color: white;
   margin: 0;
-  z-index: 1; /* fica acima da imagem */
+  z-index: 1; /* o caralho do texto fica em ciima da imagem */
 }
 
+nav 
+{
+  display: flex;
 
+}
+/* botão hambrogue */
+nav #menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+/* Responsivo: telemóveis */
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;         /* permite quebrar para outra linha */
+    justify-content: center; /* centraliza */
+    gap: 8px;
+  }
+}
+/* desktop normal */
 nav ul {
   list-style: none;
   display: flex;
@@ -71,17 +94,15 @@ nav ul {
   padding-left: 20px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
 nav ul li a {
   color: white;
   text-decoration: none;
   position: relative;
+  margin: 0px 15px;
   font-family: var(--fonte-principal);
   font-weight: 500;
   letter-spacing: 5px;
+  
 }
 
 nav ul li a::after{
