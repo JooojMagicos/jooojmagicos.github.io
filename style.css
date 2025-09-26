@@ -26,6 +26,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   position: relative;
+  cursor: pointer;
   font-family: var(--fonte-principal);
   font-weight: 500;
   letter-spacing: 3px;
