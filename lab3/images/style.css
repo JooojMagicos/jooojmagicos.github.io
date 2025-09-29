@@ -180,37 +180,6 @@ section:nth-child(1) {
     max-width: 50%;
     height: auto;
 }
-/* Mobile até 768px */
-@media (max-width: 768px) {
-    section:nth-child(1) {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #textoInicio {
-        position: static; /* remove o left fixo */
-        font-size: 36px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-
-    #bottomtext {
-        position: static;
-        width: 90%;
-        margin: 0 auto 20px auto;
-        font-size: 1rem;
-    }
-
-    .foto {
-        position: static;
-        width: 90%;
-        max-width: 400px;
-        height: auto;
-        margin: 20px auto;
-    }
-}
-
 
 /* Responsividade */
 @media (max-width: 768px) {
