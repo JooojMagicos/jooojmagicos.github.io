@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste de Eventos de Mouse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="corpo">
+  <header class="cabecalho">
+    <h1 class="titulo">Teste de Eventos de Mouse</h1>
+  </header>
+
+  <main class="principal">
+    <section class="secao-botoes">
+      <h2 class="subtitulo">Experimente os botões abaixo</h2>
+
+      <div class="botoes">
+        <button class="botao botao-click" onclick="handleClick()">Clique</button>
+        <button class="botao botao-dblclick" ondblclick="handleDblClick()">Duplo Clique</button>
+        <button class="botao botao-over" onmouseover="handleMouseOver()">Mouse Over</button>
+        <button class="botao botao-out" onmouseout="handleMouseOut()">Mouse Out</button>
+        <button class="botao botao-move" onmousemove="handleMouseMove(event)">Mouse Move</button>
+      </div>
+
+      <p class="status" id="status">Estado: pronto.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 — Página de Teste de Eventos de Mouse</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

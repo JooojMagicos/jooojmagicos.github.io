@@ -1,0 +1,198 @@
+:root { --fonte-principal: "Funnel Display", sans serif; }
+:root { --cor-destaque: #8e0000; }
+
+body 
+{
+  background-color: black;
+  display: grid;
+}
+header 
+{
+  top: -60px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-family: var(--fonte-principal);
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--cor-destaque);
+    bottom: -2px;
+    left: -2px;
+    transform: scaleX(0);
+    transition: transform 0.7s ease-out;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+section:nth-child(1) {
+  height: 90vh;
+  background: 
+  linear-gradient(#00000070, rgba(0, 0, 0, 0.517)),
+  url(images/salvacity.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  display:flex;
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  
+  
+}
+
+#textoInicio 
+{
+  font-size: 45px;
+  color: var(--cor-destaque);
+  position: relative;
+  top: 22%;
+  left: 204%;
+}
+#bottomtext
+{
+  position: relative;
+  color: white;
+  width: 35%;
+  word-break:normal;
+  word-wrap: break-word;
+
+  top: 43%;
+  left: 20%;
+}
+
+.foto 
+{
+  position:relative;
+  width: 500px;
+  height: 500px;
+  left: -23%;
+  top: 20%;
+  border-radius: 5%;
+}
+
+
+.labs {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000; /* fundo preto */
+}
+
+.textoLabs1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* branco no fundo preto */
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: 50px;
+}
+
+.card {
+    background: transparent; /* transparente, só o botão aparece */
+}
+
+.card a {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid #fff;
+    border-radius: 30px; /* bem arredondado */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover */
+.card a:hover {
+    background: #fff;
+    color: var(--cor-destaque);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+}
+
+
+
+.disciplina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    background-color: #111; /* fundo escuro */
+    color: #fff; /* texto branco */
+}
+
+/* Texto */
+.texto-disciplina {
+    flex: 1;
+    max-width: 600px;
+    padding-left: 10%;
+}
+
+.texto-disciplina h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.texto-disciplina p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Wordcloud */
+.wordcloud {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.wordcloud img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .disciplina {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-disciplina {
+        max-width: 90%;
+    }
+
+    .wordcloud {
+        margin-top: 20px;
+    }
+}
