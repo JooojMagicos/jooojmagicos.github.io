@@ -1,0 +1,85 @@
+<html>
+    <body>
+
+         <p id="passa"> passa por aqui </p>
+
+        <script>
+
+            const passa = document.querySelector("#passa");
+
+            function onmouseover()
+            {
+                passa.textContent = "1. obrigado por passares!"
+            }
+
+            function onmouseout()
+            {
+                passa.textContent = "1. passa por aqui"
+            }
+
+            passa.onmouseover = onmouseover();
+            passa.onmouseout = onmouseout();
+
+        </script>
+
+       
+
+        <br>
+
+        <p id="pinta"> pinta</p>
+        <button id="red">red</button>
+        <button id="blue">blue</button>
+        <button id="green">green</button>
+
+        <script>
+            const pinta = document.querySelector("#pinta")
+
+            pintaRed = function()
+            {
+                pinta.style.color = "red";
+            }
+
+            
+
+            document.querySelector("#red").onclick = () => {pinta.style.color = "red";}
+            document.querySelector("#green").onclick = () => {pinta.style.color = "green";}
+            document.querySelector("#blue").addEventListener('click', () => {pinta.style.color = "blue"})
+
+        </script>
+        <br>
+        <label for="palavra">3. escreve ai</label>
+        <input id="palavra" type="text" />
+
+        <script>
+
+            const inputColorir = document.querySelector("#palavra");
+            const cores = ['red','green','blue']
+            let index = 0;
+
+            function colorir()
+            {
+                inputColorir.style.background = cores[index];
+                index = (index + 1) % cores.length;
+            }
+            
+            inputColorir.onkeyup = colorir;
+            
+        </script>
+        <br>
+        <label for="caixa">texto</label>
+        <input id="caixa" type="text"/>
+        <button id="caixabtn">click</button>
+        <script>
+            const cor = document.querySelector("#caixa");
+            const buttonCor = document.querySelector("#caixabtn")
+
+            function colorir()
+            {
+                document.querySelector("body").style.background = cor.value;
+            }
+
+            buttonCor.onclick = colorir;
+
+        </script>
+    </body>
+</html>
