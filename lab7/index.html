@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>DEISI Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 20px; }
+    h1 { color: #333; }
+    #container-categorias, #compra-form, #container-filtros { margin-bottom: 20px; }
+    section { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    article { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    article img { display: block; margin: 0 auto 10px; max-width: 150px; }
+    article h2 { font-size: 1.1rem; color: #333; margin: 0 0 5px; }
+    label { display: block; margin-top: 5px; }
+    #compra-form input, #compra-form button, #container-filtros input, #container-filtros select {
+      padding: 5px 10px; margin-right: 10px;
+    }
+    #compra-form button { cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 4px; }
+    #compra-form button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h1>DEISI Shop</h1>
+
+  <!-- Filtros de produtos -->
+  <div id="container-filtros">
+    <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+    <select id="sort-select">
+      <option value="">Ordenar por</option>
+      <option value="alfabetica">Ordem alfabética (A → Z)</option>
+      <option value="preco-asc">Preço crescente</option>
+      <option value="preco-desc">Preço decrescente</option>
+    </select>
+  </div>
+
+  <!-- Container para categorias -->
+  <div id="container-categorias"></div>
+
+  <!-- Formulário de compra -->
+  <div id="compra-form">
+    <input type="text" id="coupon-input" placeholder="Cupom de desconto">
+    <label>
+      <input type="checkbox" id="student-checkbox">
+      Sou estudante
+    </label>
+    <button id="finalizar-btn">Finalizar Compra</button>
+  </div>
+
+  <!-- Container de produtos -->
+  <section id="lista-produtos"></section>
+
+  <!-- Script externo -->
+  <script src="main.js"></script>
+</body>
+</html>
